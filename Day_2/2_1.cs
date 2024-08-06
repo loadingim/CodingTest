@@ -64,7 +64,7 @@ namespace Day_2
                 return answer = countNum.Count;
             }
         }
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             Solution solo = new Solution();
             int[] number = new int[5] { 1, 2, 7, 6, 4 };
