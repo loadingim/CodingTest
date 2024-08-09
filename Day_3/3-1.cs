@@ -39,7 +39,7 @@ public class Solution
         }
         return answer;
     }
-    static void Main(string[] args)
+    static void Mai1(string[] args)
     {
         Solution solo = new Solution();
         solo.solution([1, 8, 3]);
