@@ -78,7 +78,7 @@ namespace Day_3
             }
         }
 
-        static void Main()
+        static void Main11()
         {
             string[] st = new string[] { "abce", "abcd", "cdx" };
 
