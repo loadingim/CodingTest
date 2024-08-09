@@ -15,23 +15,34 @@ public class Solution
     // </summary>
     public int[] solution(int[] array)
     {
-        int[] answer = new int[] { };
-        if(array.Length >= 1 && array.Length <= 100 && array.)
-        for (int i = 0; i < array.Length - 1; i++)
+        int[] answer = new int[2];
+        int[] arrayTest = array;
+        array = array.Distinct().ToArray();
+        Array.Sort(arrayTest);
+
+        if (array.Length >= 1 && array.Length <= 100 && arrayTest[arrayTest.Length - 1] < 1000 && arrayTest[0] > 0)
         {
-            if (array[i] > array[i + 1])
+            answer[0] = array[0];
+            for (int i = 0; i < array.Length - 1; i++)
             {
-                answer[0] = array[i];
-                answer[1] = i;
+                if (array[i] > array[i + 1])
+                {
+                    answer[0] = array[i];
+                    answer[1] = i;
+                }
+                else if(array[i] < array[i + 1])
+                {
+                    answer[0] = array[i+1];
+                    answer[1] = i+1;
+                }
             }
         }
-
         return answer;
     }
-}
     static void Main(string[] args)
     {
         Solution solo = new Solution();
         solo.solution([1, 8, 3]);
+
     }
 }
