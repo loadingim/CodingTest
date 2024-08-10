@@ -92,10 +92,12 @@ namespace FactoryTest
             Armor armor = ItemFactory.Create(ItemType.Armor) as Armor;
             Food food = ItemFactory.Create(ItemType.Food) as Food;
 
-            potion.print();
-            weapon.print();
-            armor.print();
-            food.print();
+            Item[] items = new Item[4] { potion, weapon, armor, food };
+            
+            for (int i = 0; i < items.Length; i++)
+            {
+                items[i].print();
+            }
         }
     }
 }
