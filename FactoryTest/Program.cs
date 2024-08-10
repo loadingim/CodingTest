@@ -87,6 +87,8 @@ namespace FactoryTest
 
         static void Main(string[] args)
         {
+
+            // 자꾸 객체 생성이 안되서 우수 코드 참고했습니다 as넣으니까 되더라구요 제가 아직 잘 이해를 못해서 왜 그런지 피드백 한번 부탁드립니다...
             Potion potion = ItemFactory.Create(ItemType.Potion) as Potion;
             Weapon weapon = ItemFactory.Create(ItemType.Weapon) as Weapon;
             Armor armor = ItemFactory.Create(ItemType.Armor) as Armor;
