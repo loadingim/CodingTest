@@ -25,51 +25,44 @@ namespace Day_3
     {
         public class Solution
         {
-            public int[] Ary(string[] strings, int n)
-            {
-                int[] array = new int[strings.Length];
-
-                for (int i = 0; i < strings.Length; i++)
-                {
-                    int temp = 0;
-                    foreach (char c in strings[i])
-                    {
-                        if (temp == n)
-                        {
-                            array[i] += (int)c;
-                        }
-                        temp++;
-                    }
-                }
-                return array;
-            }
             public string[] solution(string[] strings, int n)
             {
                 string[] answer = new string[] { };
-                int[] array = new int[strings.Length];
-                int[] array2 = new int[strings.Length];
-
-                array = Ary(strings, n);
-
-
+                int num = 0;
+                bool loop = true;
                 for (int i = 0; i < strings.Length - 1; i++)
                 {
                     for (int j = 0; j < strings.Length - i - 1; j++)
                     {
-                        if (array[j] > array[j + 1])
+                        if (strings[j][n] > strings[j + 1][n])
                         {
                             string temp = strings[j];
                             strings[j] = strings[j + 1];
                             strings[j + 1] = temp;
                         }
-                        else if (array[j] == array[j + 1])
+                        else if (strings[j][n] == strings[j + 1][n])
                         {
-                            array2 = Ary(strings, n + 1);
-                            if (array2[j] > array2[j + 1])
+                            loop = true;
+                            while (loop)
                             {
-                                string temp = strings[j];
-                                strings[j] = strings[j + 1];
-                                strings[j + 1] = temp;
+                                if (strings[j][num] == strings[j + 1][num] && strings[j].Length == strings[])
+                                {
+                                    num++;
+                                }
+                                else if (strings[j][num] > strings[j + 1][num] )
+                                {
+
+                                    string temp = strings[j];
+                                    strings[j] = strings[j + 1];
+                                    strings[j + 1] = temp;
+
+                                    loop = false;
+                                    num = 0;
+                                }
+                                else
+                                {
+                                    loop = false;
+                                }
                             }
                         }
                     }
@@ -78,12 +71,12 @@ namespace Day_3
             }
         }
 
-        static void Main11()
+        static void Main()
         {
-            string[] st = new string[] { "abce", "abcd", "cdx" };
+            string[] st = new string[] { "abc", "abcg ","abce", "cdx", "abcd" };
 
-            Solution solo = new Solution();
-            st = solo.solution(st, 2);
+            /*Solution solo = new Solution();
+            st = solo.solution(st, 2);*/
 
             foreach (string s in st)
             {
