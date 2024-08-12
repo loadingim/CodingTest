@@ -6,8 +6,7 @@
 
 1-2
 ![2번 문제](https://github.com/user-attachments/assets/ee9ac757-03ec-48d3-821b-920db47801ea)
-![image](https://github.com/user-attachments/assets/82883fda-fdb3-4081-b3af-0d9aa3bc3c11)
-
+![image](https://github.com/user-attachments/assets/ed2021fe-07cf-49bb-8ead-99fdb168d58a)
 
 2-2 소수 찾기
 ![문제화면](https://github.com/user-attachments/assets/9f3f4e50-8f4d-4334-b7cf-753596e3be26)
